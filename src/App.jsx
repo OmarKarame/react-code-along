@@ -3,8 +3,9 @@ import sunrise from "./assets/images/sunrise.png";
 import sun from "./assets/images/sun.png";
 import moon from "./assets/images/moon.png";
 import Nav from "./components/Nav/Nav";
-import ButtonLetsGo from "./components/ButtonLetsGo/ButtonLetsGo";
-import ButtonExplore from "./components/ButtonExplore/ButtonExplore";
+import ArtistTile from "./components/artist_tile/ArtistTile"
+import './data/artist.js'
+import artist from "./data/artist";
 
 const App = () => {
   const user = {
@@ -35,9 +36,8 @@ const App = () => {
           Good {greetingTime} <br /> {user.firstName} {user.lastName}
         </h1>
       </header>
-      <section className="button-section">
-        <ButtonLetsGo />
-        <ButtonExplore />
+      <section className="aritst-tile">
+        <ArtistTile name = {artist.strArtist} image = {artist.strArtistThumb}/>
       </section>
     </div>
   );
